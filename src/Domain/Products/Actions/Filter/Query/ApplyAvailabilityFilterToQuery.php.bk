@@ -1,0 +1,81 @@
+<?php
+
+namespace Domain\Products\Actions\Filter;
+
+use Domain\Products\Contracts\ApplyFilterToQueryAction;
+use Domain\Products\Models\Filters\Filter;
+use Domain\Products\Models\Filters\FilterAvailability;
+use Domain\Products\QueryBuilders\ProductQuery;
+use Domain\Products\ValueObjects\ProductQueryParameters;
+use Support\Contracts\AbstractAction;
+
+class ApplyAvailabilityFilterToQuery
+    extends AbstractAction
+    implements ApplyFilterToQueryAction
+{
+    public function __construct(
+        private ProductQuery           $query,
+        private ProductQueryParameters $params,
+        private Filter                 $filter,
+        private mixed                  $field,
+    )
+    {
+    }
+
+    public function execute(): void
+    {
+        $availabilityIds = $this->availabilityIds();
+
+        if (!count($availabilityIds)) {
+            return;
+        }
+
+        if ($this->params->includeParentChildren->parentsOnly()) {
+            $this->query->where(
+                fn($query) => $query
+                    ->whereIn(
+                        \DB::raw("IF(pac.id=2, pa.id, pac.id)"),
+                        $availabilityIds
+                    )
+                    ->orWhereIn(
+                        \DB::raw("IF(childpac.id=2, childpa.id, childpac.id)"),
+                        $availabilityIds
+                    )
+            );
+
+            return;
+        }
+
+        $this->query->whereIn(
+            \DB::raw("IF(pac.id=2, pa.id, pac.id)"),
+            $availabilityIds
+        );
+    }
+
+    function availabilityIds()
+    {
+        $avails = [];
+        $compares = $this->field->compare;
+
+        if (!is_array($this->field->compare)) {
+            $compares = [$this->field->compare];
+        }
+
+        foreach ($compares as $c) {
+            $avail = $this->filter->filterAvailabilities->contains(
+                fn(FilterAvailability $availability) => $availability->id == $c
+            );
+
+            if (!$avail) {
+                continue;
+            }
+
+            $avails = array_merge(
+                $avails,
+                explode("|", $avail->avail_ids)
+            );
+        }
+
+        return $avails;
+    }
+}

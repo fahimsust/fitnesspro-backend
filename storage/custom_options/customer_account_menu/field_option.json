@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Mrs.",
+        "type": "option",
+        "options": [
+            {
+                "id":"show",
+                "name":"Show"
+            },
+            {
+                "id":"hide",
+                "name":"Hide"
+            }
+        ]
+    },
+    {
+        "name": "Dr.",
+        "type": "query",
+        "query":"Select id,title as name from categories where status = 1"
+    }
+]

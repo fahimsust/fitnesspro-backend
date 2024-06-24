@@ -1,0 +1,36 @@
+<?php
+
+use Domain\Orders\Models\Order\Transactions\OrderTransaction;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration {
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table(OrderTransaction::Table(), function (Blueprint $table) {
+            $table->json('data')->nullable();
+            $table->softDeletes();
+
+            $table->renameColumn('created', 'created_at');
+            $table->renameColumn('updated', 'updated_at');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table(OrderTransaction::Table(), function (Blueprint $table) {
+            $table->dropColumn('data');
+            $table->dropSoftDeletes();
+
+            $table->renameColumn('created_at', 'created');
+            $table->renameColumn('updated_at', 'updated');
+        });
+    }
+};

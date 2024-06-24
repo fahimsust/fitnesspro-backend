@@ -1,0 +1,338 @@
+[
+  {
+    "TABLE_NAME": "accessories_fields_products",
+    "COLUMN_NAME": "price_adjust_amount"
+  },
+  {
+    "TABLE_NAME": "affiliates_levels",
+    "COLUMN_NAME": "order_rate"
+  },
+  {
+    "TABLE_NAME": "affiliates_levels",
+    "COLUMN_NAME": "subscription_rate"
+  },
+  {
+    "TABLE_NAME": "affiliates_payments",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "affiliates_referrals",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "categories",
+    "COLUMN_NAME": "max_price"
+  },
+  {
+    "TABLE_NAME": "categories",
+    "COLUMN_NAME": "min_price"
+  },
+  {
+    "TABLE_NAME": "currencies",
+    "COLUMN_NAME": "exchange_rate"
+  },
+  {
+    "TABLE_NAME": "discount_advantage",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "discount_rule_condition",
+    "COLUMN_NAME": "required_cart_value"
+  },
+  {
+    "TABLE_NAME": "discounts_levels",
+    "COLUMN_NAME": "action_percentage"
+  },
+  {
+    "TABLE_NAME": "distributors_availabilities",
+    "COLUMN_NAME": "qty_max"
+  },
+  {
+    "TABLE_NAME": "distributors_availabilities",
+    "COLUMN_NAME": "qty_min"
+  },
+  {
+    "TABLE_NAME": "distributors_canadapost",
+    "COLUMN_NAME": "default_weight"
+  },
+  {
+    "TABLE_NAME": "distributors_canadapost",
+    "COLUMN_NAME": "discount"
+  },
+  {
+    "TABLE_NAME": "distributors_endicia",
+    "COLUMN_NAME": "default_weight"
+  },
+  {
+    "TABLE_NAME": "distributors_endicia",
+    "COLUMN_NAME": "discount"
+  },
+  {
+    "TABLE_NAME": "distributors_fedex",
+    "COLUMN_NAME": "default_weight"
+  },
+  {
+    "TABLE_NAME": "distributors_fedex",
+    "COLUMN_NAME": "discount"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_flatrates",
+    "COLUMN_NAME": "end_weight"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_flatrates",
+    "COLUMN_NAME": "flat_price"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_flatrates",
+    "COLUMN_NAME": "handling_fee"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_flatrates",
+    "COLUMN_NAME": "start_weight"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_methods",
+    "COLUMN_NAME": "discount_rate"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_methods",
+    "COLUMN_NAME": "flat_price"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_methods",
+    "COLUMN_NAME": "handling_fee"
+  },
+  {
+    "TABLE_NAME": "distributors_shipping_methods",
+    "COLUMN_NAME": "handling_percentage"
+  },
+  {
+    "TABLE_NAME": "distributors_shipstation",
+    "COLUMN_NAME": "default_weight"
+  },
+  {
+    "TABLE_NAME": "distributors_shipstation",
+    "COLUMN_NAME": "discount"
+  },
+  {
+    "TABLE_NAME": "filters_pricing",
+    "COLUMN_NAME": "price_max"
+  },
+  {
+    "TABLE_NAME": "filters_pricing",
+    "COLUMN_NAME": "price_min"
+  },
+  {
+    "TABLE_NAME": "gift_cards",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "gift_cards_transactions",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "giftregistry_items",
+    "COLUMN_NAME": "qty_purchased"
+  },
+  {
+    "TABLE_NAME": "giftregistry_items",
+    "COLUMN_NAME": "qty_wanted"
+  },
+  {
+    "TABLE_NAME": "giftregistry_items_purchased",
+    "COLUMN_NAME": "qty_purchased"
+  },
+  {
+    "TABLE_NAME": "inventory_gateways_orders",
+    "COLUMN_NAME": "total_amount"
+  },
+  {
+    "TABLE_NAME": "inventory_gateways_sites",
+    "COLUMN_NAME": "pricing_adjustment"
+  },
+  {
+    "TABLE_NAME": "loyaltypoints_levels",
+    "COLUMN_NAME": "value_per_point"
+  },
+  {
+    "TABLE_NAME": "membership_levels",
+    "COLUMN_NAME": "renewal_discount"
+  },
+  {
+    "TABLE_NAME": "membership_subscriptions",
+    "COLUMN_NAME": "amount_paid"
+  },
+  {
+    "TABLE_NAME": "membership_subscriptions",
+    "COLUMN_NAME": "subscription_price"
+  },
+  {
+    "TABLE_NAME": "options_templates_options_values",
+    "COLUMN_NAME": "price"
+  },
+  {
+    "TABLE_NAME": "orders",
+    "COLUMN_NAME": "addtl_discount"
+  },
+  {
+    "TABLE_NAME": "orders",
+    "COLUMN_NAME": "addtl_fee"
+  },
+  {
+    "TABLE_NAME": "orders",
+    "COLUMN_NAME": "payment_method_fee"
+  },
+  {
+    "TABLE_NAME": "orders_packages",
+    "COLUMN_NAME": "dryice_weight"
+  },
+  {
+    "TABLE_NAME": "orders_products",
+    "COLUMN_NAME": "product_price"
+  },
+  {
+    "TABLE_NAME": "orders_products",
+    "COLUMN_NAME": "product_saleprice"
+  },
+  {
+    "TABLE_NAME": "orders_products_customsinfo",
+    "COLUMN_NAME": "customs_value"
+  },
+  {
+    "TABLE_NAME": "orders_products_customsinfo",
+    "COLUMN_NAME": "customs_weight"
+  },
+  {
+    "TABLE_NAME": "orders_products_options",
+    "COLUMN_NAME": "price"
+  },
+  {
+    "TABLE_NAME": "orders_shipments",
+    "COLUMN_NAME": "cod_amount"
+  },
+  {
+    "TABLE_NAME": "orders_shipments",
+    "COLUMN_NAME": "insured_value"
+  },
+  {
+    "TABLE_NAME": "orders_shipments",
+    "COLUMN_NAME": "ship_cost"
+  },
+  {
+    "TABLE_NAME": "orders_transactions",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "orders_transactions",
+    "COLUMN_NAME": "original_amount"
+  },
+  {
+    "TABLE_NAME": "orders_transactions_credits",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "payment_methods_limitcountries",
+    "COLUMN_NAME": "fee"
+  },
+  {
+    "TABLE_NAME": "pricing_rules_levels",
+    "COLUMN_NAME": "amount"
+  },
+  {
+    "TABLE_NAME": "products",
+    "COLUMN_NAME": "combined_stock_qty"
+  },
+  {
+    "TABLE_NAME": "products",
+    "COLUMN_NAME": "default_cost"
+  },
+  {
+    "TABLE_NAME": "products",
+    "COLUMN_NAME": "weight"
+  },
+  {
+    "TABLE_NAME": "products_availability",
+    "COLUMN_NAME": "qty_max"
+  },
+  {
+    "TABLE_NAME": "products_availability",
+    "COLUMN_NAME": "qty_min"
+  },
+  {
+    "TABLE_NAME": "products_details",
+    "COLUMN_NAME": "rating"
+  },
+  {
+    "TABLE_NAME": "products_distributors",
+    "COLUMN_NAME": "cost"
+  },
+  {
+    "TABLE_NAME": "products_distributors",
+    "COLUMN_NAME": "stock_qty"
+  },
+  {
+    "TABLE_NAME": "products_options_values",
+    "COLUMN_NAME": "price"
+  },
+  {
+    "TABLE_NAME": "products_pricing",
+    "COLUMN_NAME": "max_qty"
+  },
+  {
+    "TABLE_NAME": "products_pricing",
+    "COLUMN_NAME": "min_qty"
+  },
+  {
+    "TABLE_NAME": "products_pricing",
+    "COLUMN_NAME": "price_reg"
+  },
+  {
+    "TABLE_NAME": "products_pricing",
+    "COLUMN_NAME": "price_sale"
+  },
+  {
+    "TABLE_NAME": "products_pricing_temp",
+    "COLUMN_NAME": "price_reg"
+  },
+  {
+    "TABLE_NAME": "products_pricing_temp",
+    "COLUMN_NAME": "price_sale"
+  },
+  {
+    "TABLE_NAME": "products_reviews",
+    "COLUMN_NAME": "rating"
+  },
+  {
+    "TABLE_NAME": "saved_cart_items",
+    "COLUMN_NAME": "price_reg"
+  },
+  {
+    "TABLE_NAME": "saved_cart_items",
+    "COLUMN_NAME": "price_sale"
+  },
+  {
+    "TABLE_NAME": "shipping_methods",
+    "COLUMN_NAME": "price"
+  },
+  {
+    "TABLE_NAME": "shipping_methods",
+    "COLUMN_NAME": "weight_limit"
+  },
+  {
+    "TABLE_NAME": "shipping_methods",
+    "COLUMN_NAME": "weight_min"
+  },
+  {
+    "TABLE_NAME": "sites_payment_methods",
+    "COLUMN_NAME": "fee"
+  },
+  {
+    "TABLE_NAME": "states",
+    "COLUMN_NAME": "tax_rate"
+  },
+  {
+    "TABLE_NAME": "tax_rules",
+    "COLUMN_NAME": "rate"
+  }
+]

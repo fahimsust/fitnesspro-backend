@@ -1,0 +1,39 @@
+<?php
+
+use Domain\Messaging\Models\MessageTemplate;
+use Domain\Messaging\Models\MessageTemplateCategory;
+use Domain\Products\Models\Category\Category;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create(MessageTemplateCategory::Table(), function (Blueprint $table) {
+            $table->id();
+            $table->string("name", 255);
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->foreign('parent_id')
+                ->references('id')->on(MessageTemplateCategory::Table())-> nullOnDelete();
+            $table->timestamps();
+        });
+        Schema::table(MessageTemplate::Table(), function (Blueprint $table) {
+            $table->dropForeign(['category_id']);
+            $table->foreign('category_id')
+                ->references('id')->on(MessageTemplateCategory::Table())-> nullOnDelete();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists(MessageTemplateCategory::Table());
+    }
+};
